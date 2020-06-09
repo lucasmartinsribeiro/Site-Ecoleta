@@ -1,0 +1,109 @@
+#modal{
+    background-color: #0E0A14ef; /* tem como ulitizar o modo alfa escolando a cor desse modo, colando duas letras no final FF(mais forte) e 00(nulo) */
+
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed; /*para fichar ele à página */
+    top: 0; /* para jogar ele lá para o topo */
+
+    /*agora eu vou configurar o que tem dentro dele */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+}
+
+/* o modal tem uma classe chamada hihe */
+#modal.hide{
+    display: none;
+}
+
+#modal .content{
+    color: white;
+
+    width: 420px;
+}
+
+#modal .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 48px;
+}
+
+#modal .header a{
+    background-image: url("../assets/icones/x.svg");
+
+    /* para colocar a imagem */
+    width: 20px;
+    height: 20px;
+    display: flex;
+
+    font-size: 0.01px;
+}
+
+#modal .header h1{
+    color: white;
+
+    font-size: 36px;
+    line-height: 42px;
+}
+
+#modal form label {
+    font-size: 14px;
+    line-height: 16px;
+
+    /*ele é um display inline, então ele não pegar o bottom. Por isso eu utilizei O block */
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* agora vamos para os filhos */
+#modal form .field{
+    display: flex;
+}
+
+#modal form input{
+    flex: 1; /* ele vai pegar todo o espaço que sobra para ele, ou seja ele vai fazer todo o input crescer*/
+
+    background-color: #f0f0f5;
+
+    border-radius: 8px 0 0 8px; /*acertando as bordas do botão*/
+    border: 0;
+
+    padding: 16px 24px;
+
+    font-size: 16px;
+    color: #6c6c80;
+}
+
+/* mexer no botão */
+#modal form button{
+    width: 72px;
+    height: 72px;
+
+    background-color: var(--primary-color);
+
+    border: 0;
+    border-radius: 0 8px 8px 0; /*acertando as bordas do botão*/
+}
+
+#modal form button:hover{
+    background-color: #2fb85e;
+}
+
+
+/* Isto é para o modal point created */
+#modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.point h1{
+    color: white;
+
+    margin-top: 32px;
+}

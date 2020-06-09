@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block title %}
+            <title>Ecoleta</title>
+        {% endblock title %}
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/styles/main.css">
+
+        <!-- eu vou pegar o conteudo que tem na outra página, e substituir aqui. Se ele não tiver um block com esse nome ele não vai substituir/ ele não vai aparecer na minha página -->
+        {% block styles %}
+        {% endblock styles %}
+
+        <link rel="stylesheet" href="/styles/responsive.css">
+
+    </head>
+    <body>
+
+        <div id="{{ pageId }}">
+            <!-- criando uma variavel -->
+            {% block content %}{% endblock content %}
+        </div>
+
+        {% block modal %}
+        {% endblock modal %}
+
+        {% block scripts %}
+        {% endblock scripts %}
+
+    </body>
+</html>

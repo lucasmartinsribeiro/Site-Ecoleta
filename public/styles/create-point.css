@@ -1,0 +1,194 @@
+#page-create-point{
+    width: 90%; /*dinamico*/
+    max-width: 1100px; /*ficho*/
+
+    margin: 0 auto; /* Alinhamento e espaçamento da caixa (pelo lado de fora da caixa) */
+}
+
+#page-create-point header{
+    margin-top: 48px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*espaço entre eles*/
+}
+
+#page-create-point header a{
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point header a span{
+    background-image: url('../assets/icones/arrow-left.svg');
+    margin-right: 16px;
+
+    width: 20px;
+    height: 24px;
+}
+
+
+/* formulario */
+form{
+    background-color: white;
+
+    margin: 80px auto;
+    padding: 64px;  /*preenchimento e espaçamento dentro do conteúdo */
+
+    border-radius: 8px;
+
+    max-width: 730px;
+}
+
+form h1{
+    font-size: 36px;
+}
+
+form fieldset{
+    margin-top: 64px; /*valores acima do elemento */
+
+    border: 0;
+}
+
+form legend{
+    margin-bottom: 40px;
+
+    /*para arrumar a palavra que está dentro do legende span */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form legend span{
+    font-size: 14px;
+    color: var(--title-color);
+}
+
+form .field{
+    display: flex; /*o contêiner se torna flexível */
+    flex-direction: column;
+
+    flex: 1; /*para que tenha um preenchimento automatico dos elementos*/
+
+    margin-bottom: 24px;
+}
+
+form .field-group{
+    display: flex; /*colocando os elementos um do lado do outro */
+}
+
+form input{
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px; /* arredondamento das bordas */
+
+    /* outline: none; serve para tirar a linha do campo selecionado */
+}
+
+form select{
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field{ /*separando em duas colunas */
+    margin-left: 24px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    border-radius: 8px;
+    border: 0;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    margin-top: 40px;
+
+    transition: background-color 400ms;
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
+
+
+/* Itens de coleta */
+.items-grid{
+    display: grid; /*display multidimensional */
+    grid-template-columns: 1fr 1fr 1fr; /* jeito flexivel (frações) */
+    gap: 16px; /*espaçamento */
+}
+
+.items-grid li{
+    background-color: #f5f5f5;
+    list-style: none; /*tirar os bullets (bolinhas preta) */
+
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+
+    height: 180px;
+
+    padding: 32px 24px 16px; /*topo laterais em baixo */
+
+    display: flex; /* alinhar um ao lado do outro */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center; /*alinhar o texto ao centro */
+
+    cursor: pointer; /* mudar o cursor para a mãozinha */
+}
+
+.items-grid li span{
+    margin-top: 12px;
+
+    flex: 1; /*para que ele tenha um tamanho que preenche sozinho */
+
+    /* alinhando ele ao meio */
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+.items-grid .selected{ /* mudar para as cores quando estiver selecionado */
+    background-color: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none; /* não há eventos de ponteiro nos filhos de li */
+}
