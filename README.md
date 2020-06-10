@@ -1,2 +1,2 @@
-# Site-Ecoleta
- Site criado no projeto NextLevelWeek da Rocketseat
+# Ecoleta
+ Aplicação desenvolvida durante a 1ª Next Level Week promovida pela Rockeseat e ministrada por Diego Fernandes e Mayk Brito.
