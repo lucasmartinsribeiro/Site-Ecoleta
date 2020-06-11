@@ -1,5 +1,5 @@
 {
-  "name": "NLW",
+  "name": "Site-Ecoleta",
   "scripts": {
     "start": "nodemon src/server.js"
   },
